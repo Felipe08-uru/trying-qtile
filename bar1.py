@@ -67,4 +67,4 @@ bar = Bar([
     ),
 
     Spacer(length=20, background=gruvbox['bg0'])
-], background=gruvbox['bg'], size=26, margin=9)
+], background=gruvbox['bg'], size=32, margin=5)
