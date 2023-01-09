@@ -148,7 +148,7 @@ groups = [
           Match(wm_class='firefox'), Match(wm_class='brave'), Match(wm_class='qutebrowser')], layout="stack"),
     Group('2', label=" ", layout="monadtall"),
     Group('3', label=" ", layout="columns"),
-    Group('4', label=" ", matches=[
+    Group('4', label="", matches=[
           Match(wm_class='discord'), Match(wm_class='zoom'), Match(wm_class="teams-for-linux")], layout="stack"),
     Group('5', label="ﱘ ", matches=[Match(wm_class="Spotify")], layout="stack"),
 ]
