@@ -11,60 +11,60 @@ from libqtile.widget.window_count import WindowCount
 from libqtile.widget.windowname import WindowName
 
 from unicodes import right_arrow, left_arrow
-from colors import gruvbox
+from colors import catppuccin
 
 bar = Bar([
     GroupBox(
         disable_drag=True,
-        active=gruvbox['gray'],
-        inactive=gruvbox['dark-gray'],
+        active=catppuccin['text'],
+        inactive=catppuccin['subtext1'],
         highlight_method='line',
-        block_highlight_text_color=gruvbox['cyan'],
+        block_highlight_text_color=catppuccin['blue'],
         borderwidth=0,
-        highlight_color=gruvbox['bg'],
-        background=gruvbox['bg']
+        highlight_color=catppuccin['surface1'],
+        background=catppuccin['surface1']
     ),
-    right_arrow(gruvbox['fg0'], gruvbox['bg']),
+    right_arrow(catppuccin['surface0'], catppuccin['surface1']),
     CurrentLayout(
-        background=gruvbox['fg0'],
-        foreground=gruvbox['fg9']
+        background=catppuccin['surface0'],
+        foreground=catppuccin['text']
     ),
-    right_arrow(gruvbox['bg0'], gruvbox['fg0']),
+    right_arrow(catppuccin['base'], catppuccin['surface0']),
 
     WindowCount(
         text_format='缾 {num}',
-        background=gruvbox['bg0'],
-        foreground=gruvbox['fg9'],
+        background=catppuccin['base'],
+        foreground=catppuccin['text'],
         show_zero=True,
     ),
 
-    right_arrow(gruvbox['bg'], gruvbox['bg0']),
-    WindowName(foreground=gruvbox['fg']),
+    right_arrow(catppuccin['surface1'], catppuccin['base']),
+    WindowName(foreground=catppuccin['text']),
 
-    left_arrow(gruvbox['bg'], gruvbox['fg1']),
+    left_arrow(catppuccin['surface1'], catppuccin['base']),
     CPU(
         format=' {freq_current}GHz {load_percent}%',
-        background=gruvbox['fg1'],
-        foreground=gruvbox['dark-green']
+        background=catppuccin['base'],
+        foreground=catppuccin['green']
     ),
 
-    left_arrow(gruvbox['fg1'], gruvbox['fg2']),
+    left_arrow(catppuccin['base'], catppuccin['surface0']),
     Net(
-        background=gruvbox['fg2'],
-        foreground=gruvbox['yellow']
+        background=catppuccin['surface0'],
+        foreground=catppuccin['yellow']
     ),
 
-    left_arrow(gruvbox['fg2'], gruvbox['fg3']),
+    left_arrow(catppuccin['surface0'], catppuccin['surface1']),
     Clock(
-        background=gruvbox['fg3'],
-        foreground=gruvbox['dark-blue'],
+        background=catppuccin['surface1'],
+        foreground=catppuccin['shappire'],
         format=' %Y-%m-%d %a %I:%M %p'
     ),
 
-    left_arrow(gruvbox['fg3'], gruvbox['bg0']),
+    left_arrow(catppuccin['surface1'], catppuccin['surface2']),
     Systray(
-        background=gruvbox['bg0']
+        background=catppuccin['surface2']
     ),
 
-    Spacer(length=20, background=gruvbox['bg0'])
-], background=gruvbox['bg'], size=32, margin=5)
+    Spacer(length=20, background=catppuccin['surface2'])
+], background=catppuccin['surface1'], size=32, margin=5)

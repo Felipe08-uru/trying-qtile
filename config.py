@@ -21,6 +21,7 @@ from libqtile.lazy import lazy
 # from libqtile.utils import guess_terminal
 
 from colors import gruvbox
+from colors import catppuccin
 
 from bar1 import bar
 
@@ -178,7 +179,7 @@ groups.append(ScratchPad('scratchpad', [
 ]))
 # extend keys list with keybinding for scratchpad
 keys.extend([
-    Key(["control"], "1", lazy.group['scratchpad'].dropdown_toggle('term')),
+    Key(["control"], "1", lazy.group['scratchpad'].dropdown_toggle('nerm')),
     Key(["control"], "2", lazy.group['scratchpad'].dropdown_toggle('mixer')),
     Key(["control"], "3", lazy.group['scratchpad'].dropdown_toggle('pomo')),
     Key(["control"], "4", lazy.group['scratchpad'].dropdown_toggle('bitwarden')),
@@ -186,23 +187,23 @@ keys.extend([
 
 layouts = [
     Stack(
-        border_normal=gruvbox['dark-gray'],
-        border_focus=gruvbox['cyan'],
+        border_normal=catppuccin['base'],
+        border_focus=catppuccin['blue'],
         border_width=2,
         num_stacks=1,
         margin=8,
     ),
     MonadTall(
-        border_normal=gruvbox['dark-gray'],
-        border_focus=gruvbox['cyan'],
+        border_normal=catppuccin['base'],
+        border_focus=catppuccin['blue'],
         margin=8,
         border_width=2,
         single_border_width=1,
         single_margin=8,
     ),
     Columns(
-        border_normal=gruvbox['dark-gray'],
-        border_focus=gruvbox['cyan'],
+        border_normal=catppuccin['base'],
+        border_focus=catppuccin['blue'],
         border_width=2,
         border_normal_stack=gruvbox['dark-gray'],
         border_focus_stack=gruvbox['dark-green'],
@@ -273,4 +274,3 @@ wmname = "LG3D"
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.run([home])
-
