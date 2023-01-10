@@ -79,14 +79,14 @@ bar = Bar([
         foreground=catppuccin['lavender'],
         format='{percent:2.0%} {hour:d}:{min:02d}',
     ),
-    Systray(
-        background=catppuccin['surface2'],
-    ),
     left_arrow(catppuccin['surface2'], catppuccin['overlay0']),
     QuickExit(
         default_text=' ',
         foreground=catppuccin['maroon'],
         countdown_format='[{}]',
+        background=catppuccin['overlay0'],
+    ),
+    Systray(
         background=catppuccin['overlay0'],
     ),
 ], background=catppuccin['mantle'], size=32, margin=5)
