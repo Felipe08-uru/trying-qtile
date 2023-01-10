@@ -73,9 +73,9 @@ bar = Bar([
         background=catppuccin['surface2'],
         foreground=catppuccin['text'],
     ),
-    # Systray(
-        # background=catppuccin['surface2'],
-    # ),
+    Systray(
+        background=catppuccin['surface2'],
+    ),
 
     Spacer(length=20, background=catppuccin['surface2'])
 ], background=catppuccin['surface1'], size=32, margin=5)
