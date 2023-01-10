@@ -35,52 +35,44 @@ bar = Bar([
         foreground=catppuccin['text']
     ),
     right_arrow(catppuccin['surface0'], catppuccin['surface1']),
-
     WindowCount(
         text_format='缾 {num}',
         background=catppuccin['surface0'],
         foreground=catppuccin['text'],
         show_zero=True,
     ),
-
     right_arrow(catppuccin['base'], catppuccin['surface0']),
-
     Volume(
         background=catppuccin['base'],
         foreground=catppuccin['text'],
         scroll=True,
         emoji=True,
     ),
-
     right_arrow(catppuccin['mantle'], catppuccin['base']),
     WindowName(foreground=catppuccin['text']),
-
     left_arrow(catppuccin['mantle'], catppuccin['base']),
     Cmus(
         background=catppuccin['base'],
         foreground=catppuccin['green'],
         play_color=catppuccin['green'],
     ),
-
     left_arrow(catppuccin['base'], catppuccin['surface0']),
-    Net(
-        background=catppuccin['surface0'],
-        foreground=catppuccin['yellow']
-    ),
     CheckUpdates(
         background=catppuccin['surface0'],
         foreground=catppuccin['yellow'],
         colour_no_updates=catppuccin['yellow'],
         colour_have_updates=catppuccin['red']
     ),
-
+    Net(
+        background=catppuccin['surface0'],
+        foreground=catppuccin['yellow']
+    ),
     left_arrow(catppuccin['surface0'], catppuccin['surface1']),
     Clock(
         background=catppuccin['surface1'],
         foreground=catppuccin['shappire'],
         format=' %Y-%m-%d %a %I:%M %p'
     ),
-
     left_arrow(catppuccin['surface1'], catppuccin['surface2']),
     Battery(
         background=catppuccin['surface2'],
