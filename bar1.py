@@ -77,7 +77,7 @@ bar = Bar([
     Battery(
         background=catppuccin['surface2'],
         foreground=catppuccin['lavender'],
-        format='{char} {percent:2.0%} {hour:d}:{min:02d}',
+        format='{percent:2.0%} {hour:d}:{min:02d}',
     ),
     Systray(
         background=catppuccin['surface2'],
