@@ -45,7 +45,7 @@ keys = [
 
     # DmenuRun
     Key([mod], 'p', lazy.run_extension(DmenuRun(
-        font="JetBrainsMono Nerd Font",
+        font="FiraCode Nerd Font Mono",
         fontsize="13",
         dmenu_command="dmenu_run",
         dmenu_prompt=" ",
@@ -59,8 +59,8 @@ keys = [
 
     Key([mod, "shift"], 'w', lazy.run_extension(WindowList(
         all_groups=True,
-        font="JetBrainsMono Nerd Font",
-        fontsize="13",
+        font="FiraCode Nerd Font Mono",
+        fontsize="15",
         dmenu_prompt=" ",
         dmenu_height=10,
         # dmenu_lines=15,
@@ -76,7 +76,7 @@ keys = [
             'Dev notes': 'kitty nvim Neorg/Notes/Dev/index.norg',
             'JWL notes': 'kitty nvim Neorg/Notes/JWL/index.norg',
             'YouTube notes': 'kitty nvim Neorg/YT/index.norg',
-        },
+            },
         background=gruvbox['bg'],
         foreground=gruvbox['fg'],
         dmenu_prompt=' ',
@@ -84,7 +84,7 @@ keys = [
         dmenu_height=10,
         selected_foreground=gruvbox['blue'],
         selected_background=gruvbox['bg'],
-    ))),
+        ))),
 
     # Toggle floating and fullscreen
     Key([mod], "f", lazy.window.toggle_fullscreen(),
@@ -144,14 +144,14 @@ keys = [
 ]
 
 groups = [
-    Group('1', label="", matches=[
-        Match(wm_class='firefox')], layout="stack"),
-    Group('2', label="", layout="monadtall"),
-    Group('3', label="", layout="columns"),
-    Group('4', label="", matches=[
-        Match(wm_class='discord'), Match(wm_class='zoom')], layout="stack"),
-    Group('5', label="ﱘ", matches=[Match(wm_class="Spotify")], layout="monadtall"),
-]
+        Group('1', label="", matches=[
+            Match(wm_class='firefox')], layout="stack"),
+        Group('2', label="", layout="monadtall"),
+        Group('3', label="", layout="columns"),
+        Group('4', label="", matches=[
+            Match(wm_class='discord'), Match(wm_class='zoom')], layout="stack"),
+        Group('5', label="ﱘ", matches=[Match(wm_class="Spotify")], layout="monadtall"),
+        ]
 
 
 for i in groups:
@@ -166,7 +166,7 @@ for i in groups:
         # mod1 + shift + letter of group = move focused window to group
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
             desc="move focused window to group {}".format(i.name)),
-    ])
+        ])
 
 # Append scratchpad with dropdowns to groups
 groups.append(ScratchPad('scratchpad', [
@@ -176,78 +176,78 @@ groups.append(ScratchPad('scratchpad', [
     DropDown('pomo', 'pomotroid', x=0.4, y=0.2, opacity=1),
     DropDown('bitwarden', 'bitwarden-desktop',
              width=0.4, height=0.6, x=0.3, y=0.1, opacity=1),
-]))
+    ]))
 # extend keys list with keybinding for scratchpad
 keys.extend([
     Key(["control"], "1", lazy.group['scratchpad'].dropdown_toggle('nerm')),
     Key(["control"], "2", lazy.group['scratchpad'].dropdown_toggle('mixer')),
     Key(["control"], "3", lazy.group['scratchpad'].dropdown_toggle('pomo')),
     Key(["control"], "4", lazy.group['scratchpad'].dropdown_toggle('bitwarden')),
-])
+    ])
 
 layouts = [
-    Stack(
-        border_normal=catppuccin['base'],
-        border_focus=catppuccin['blue'],
-        border_width=2,
-        num_stacks=1,
-        margin=8,
-    ),
-    MonadTall(
-        border_normal=catppuccin['base'],
-        border_focus=catppuccin['blue'],
-        margin=8,
-        border_width=2,
-        single_border_width=1,
-        single_margin=8,
-    ),
-    Columns(
-        border_normal=catppuccin['base'],
-        border_focus=catppuccin['blue'],
-        border_width=2,
-        border_normal_stack=gruvbox['dark-gray'],
-        border_focus_stack=gruvbox['dark-green'],
-        border_on_single=2,
-        margin=8,
-        margin_on_single=8,
-    )
-]
+        Stack(
+            border_normal=catppuccin['base'],
+            border_focus=catppuccin['lavender'],
+            border_width=2,
+            num_stacks=1,
+            margin=8,
+            ),
+        MonadTall(
+            border_normal=catppuccin['base'],
+            border_focus=catppuccin['lavender'],
+            margin=8,
+            border_width=2,
+            single_border_width=1,
+            single_margin=8,
+            ),
+        Columns(
+            border_normal=catppuccin['base'],
+            border_focus=catppuccin['lavender'],
+            border_width=2,
+            border_normal_stack=gruvbox['dark-gray'],
+            border_focus_stack=gruvbox['dark-green'],
+            border_on_single=2,
+            margin=8,
+            margin_on_single=8,
+            )
+        ]
 
 floating_layout = Floating(
-    border_normal=gruvbox['bg0'],
-    border_focus=gruvbox['magenta'],
-    border_width=2,
-    float_rules=[
-        *Floating.default_float_rules,
-        Match(wm_class='confirmreset'),  # gitk
-        Match(wm_class='makebranch'),  # gitk
-        Match(wm_class='maketag'),  # gitk
-        Match(wm_class='ssh-askpass'),  # ssh-askpass
-        Match(title='branchdialog'),  # gitk
-        Match(title='pinentry'),  # GPG key password entry
+        border_normal=gruvbox['bg0'],
+        border_focus=gruvbox['magenta'],
+        border_width=2,
+        float_rules=[
+            *Floating.default_float_rules,
+            Match(wm_class='confirmreset'),  # gitk
+            Match(wm_class='makebranch'),  # gitk
+            Match(wm_class='maketag'),  # gitk
+            Match(wm_class='ssh-askpass'),  # ssh-askpass
+            Match(title='branchdialog'),  # gitk
+            Match(title='pinentry'),  # GPG key password entry
 
-        Match(title="Android Emulator - pixel5:5554"),
-        Match(wm_class="Genymotion Player"),
-        Match(title="AICOMS"),
-        Match(wm_class="blueman-manager"),
-        Match(wm_class="pavucontrol"),
-        Match(wm_class="zoom "),
-        Match(wm_class="bitwarden"),
-        Match(wm_class="nemo"),
-        Match(wm_class="xarchiver"),
-    ])
+            Match(title="Android Emulator - pixel5:5554"),
+            Match(wm_class="Genymotion Player"),
+            Match(title="AICOMS"),
+            Match(wm_class="blueman-manager"),
+            Match(wm_class="pavucontrol"),
+            Match(wm_class="zoom "),
+            Match(wm_class="bitwarden"),
+            Match(wm_class="nemo"),
+            Match(wm_class="xarchiver"),
+            ])
 
 # Drag floating layouts.
 mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(),
-         start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(),
-         start=lazy.window.get_size()),
-    Click([mod], "Button2", lazy.window.bring_to_front())
-]
+        Drag([mod], "Button1", lazy.window.set_position_floating(),
+             start=lazy.window.get_position()),
+        Drag([mod], "Button3", lazy.window.set_size_floating(),
+             start=lazy.window.get_size()),
+        Click([mod], "Button2", lazy.window.bring_to_front())
+        ]
 widget_defaults = dict(
-    font='JetBrainsMono Nerd Font',
-    fontsize=13,
+        font='FiraCode Nerd Font Mono',
+    fontsize=12,
     padding=10,
     foreground=catppuccin['surface0'],
 )

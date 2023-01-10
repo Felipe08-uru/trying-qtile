@@ -32,7 +32,7 @@ def left_arrow(bg_color, fg_color):
     return TextBox(
         text='',
         padding=0,
-        fontsize=23,
+        fontsize=30,
         background=bg_color,
         foreground=fg_color)
 
@@ -41,6 +41,6 @@ def right_arrow(bg_color, fg_color):
     return TextBox(
         text='',
         padding=0,
-        fontsize=23,
+        fontsize=30,
         background=bg_color,
         foreground=fg_color)
