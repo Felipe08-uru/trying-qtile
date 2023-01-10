@@ -144,13 +144,13 @@ keys = [
 ]
 
 groups = [
-    Group('1', label="", matches=[
-          Match(wm_class='firefox'), Match(wm_class='brave'), Match(wm_class='qutebrowser')], layout="stack"),
-    Group('2', label=" ", layout="monadtall"),
-    Group('3', label=" ", layout="columns"),
+    Group('1', label="", matches=[
+        Match(wm_class='firefox')], layout="stack"),
+    Group('2', label="", layout="monadtall"),
+    Group('3', label="", layout="columns"),
     Group('4', label="", matches=[
-          Match(wm_class='discord'), Match(wm_class='zoom'), Match(wm_class="teams-for-linux")], layout="stack"),
-    Group('5', label="ﱘ ", matches=[Match(wm_class="Spotify")], layout="stack"),
+        Match(wm_class='discord'), Match(wm_class='zoom')], layout="stack"),
+    Group('5', label="ﱘ", matches=[Match(wm_class="Spotify")], layout="monadtall"),
 ]
 
 
@@ -249,7 +249,7 @@ widget_defaults = dict(
     font='JetBrainsMono Nerd Font',
     fontsize=13,
     padding=10,
-    foreground=gruvbox['bg'],
+    foreground=catppuccin['surface0'],
 )
 
 extension_defaults = widget_defaults.copy()
