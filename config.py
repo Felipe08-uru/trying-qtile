@@ -18,7 +18,7 @@ from libqtile.layout.floating import Floating
 
 from libqtile.config import Click, Drag, DropDown, Group, Key, Match, ScratchPad, Screen
 from libqtile.lazy import lazy
-# from libqtile.utils import guess_terminal
+# from libqtile.utils import guess_terminal;
 
 from colors import gruvbox
 from colors import catppuccin

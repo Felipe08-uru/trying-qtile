@@ -1,7 +1,9 @@
 from libqtile.bar import Bar
 from libqtile.widget.clock import Clock
+from libqtile.widget.cmus import Cmus
 from libqtile.widget.cpu import CPU
 from libqtile.widget.currentlayout import CurrentLayout
+from libqtile.widget.battery import Battery
 from libqtile.widget.groupbox import GroupBox
 from libqtile.widget.memory import Memory
 from libqtile.widget.net import Net
@@ -42,11 +44,16 @@ bar = Bar([
     WindowName(foreground=catppuccin['text']),
 
     left_arrow(catppuccin['surface1'], catppuccin['base']),
-    CPU(
-        format=' {freq_current}GHz {load_percent}%',
+    Cmus(
         background=catppuccin['base'],
-        foreground=catppuccin['green']
+        foreground=catppuccin['green'],
+        play_color=catppuccin['green'],
     ),
+    # CPU(
+    #     format=' {freq_current}GHz {load_percent}%',
+    #     background=catppuccin['base'],
+    #     foreground=catppuccin['green']
+    # ),
 
     left_arrow(catppuccin['base'], catppuccin['surface0']),
     Net(
@@ -62,9 +69,13 @@ bar = Bar([
     ),
 
     left_arrow(catppuccin['surface1'], catppuccin['surface2']),
-    Systray(
-        background=catppuccin['surface2']
+    Battery(
+        background=catppuccin['surface2'],
+        foreground=catppuccin['text'],
     ),
+    # Systray(
+        # background=catppuccin['surface2'],
+    # ),
 
     Spacer(length=20, background=catppuccin['surface2'])
 ], background=catppuccin['surface1'], size=32, margin=5)
