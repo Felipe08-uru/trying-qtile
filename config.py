@@ -147,10 +147,11 @@ groups = [
         Group('1', label="", matches=[
             Match(wm_class='firefox')], layout="stack"),
         Group('2', label="", layout="monadtall"),
-        Group('3', label="", layout="columns"),
-        Group('4', label="", matches=[
+        Group('3', label="", layout="monadtall"),
+        Group('4', label="", layout="columns"),
+        Group('5', label="", matches=[
             Match(wm_class='discord'), Match(wm_class='zoom')], layout="stack"),
-        Group('5', label="ﱘ", matches=[Match(wm_class="Spotify")], layout="monadtall"),
+        Group('6', label="ﱘ", matches=[Match(wm_class="Spotify")], layout="monadtall"),
         ]
 
 
