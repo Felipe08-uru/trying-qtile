@@ -35,56 +35,8 @@ keys = [
 
     # Launch applications
     Key([mod, "control"], "f", lazy.spawn('firefox'), desc="Launch browser"),
-    # Key([mod], "e", lazy.spawn('kitty -e nnn -d -a -S'),
-    #     desc="Launch nnn in home directory"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-
-    # Command prompt
     Key([mod], "r", lazy.spawn('rofi -show run')),
-    #     desc="Spawn a command using a prompt widget"),
-
-    # DmenuRun
-    Key([mod], 'p', lazy.run_extension(DmenuRun(
-        font="FiraCode Nerd Font Mono",
-        fontsize="13",
-        dmenu_command="dmenu_run",
-        dmenu_prompt=" ",
-        dmenu_height=10,
-        dmenu_lines=15,
-        background=gruvbox['bg'],
-        foreground=gruvbox['fg'],
-        selected_foreground=gruvbox['dark-blue'],
-        selected_background=gruvbox['bg'],
-    ))),
-
-    Key([mod, "shift"], 'w', lazy.run_extension(WindowList(
-        all_groups=True,
-        font="FiraCode Nerd Font Mono",
-        fontsize="15",
-        dmenu_prompt=" ",
-        dmenu_height=10,
-        # dmenu_lines=15,
-        background=gruvbox['bg'],
-        foreground=gruvbox['fg'],
-        selected_foreground=gruvbox['dark-blue'],
-        selected_background=gruvbox['bg'],
-    ))),
-
-    Key([mod, "control"], 'n', lazy.run_extension(CommandSet(
-        commands={
-            'Thesis notes': 'kitty nvim Neorg/Notes/Thesis/index.norg',
-            'Dev notes': 'kitty nvim Neorg/Notes/Dev/index.norg',
-            'JWL notes': 'kitty nvim Neorg/Notes/JWL/index.norg',
-            'YouTube notes': 'kitty nvim Neorg/YT/index.norg',
-            },
-        background=gruvbox['bg'],
-        foreground=gruvbox['fg'],
-        dmenu_prompt=' ',
-        dmenu_lines=10,
-        dmenu_height=10,
-        selected_foreground=gruvbox['blue'],
-        selected_background=gruvbox['bg'],
-        ))),
 
     # Toggle floating and fullscreen
     Key([mod], "f", lazy.window.toggle_fullscreen(),
@@ -128,9 +80,6 @@ keys = [
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
-    # Toggle between split and unsplit sides of stack.
-    # Split = all windows displayed
-    # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack"),
@@ -160,10 +109,6 @@ for i in groups:
         # mod1 + letter of group = switch to group
         Key([mod], i.name, lazy.group[i.name].toscreen(),
             desc="Switch to group {}".format(i.name)),
-
-        # Key([mod], i.name, lazy.function(go_to_group(i.name))),
-
-        # Or, use below if you prefer not to switch to that group.
         # mod1 + shift + letter of group = move focused window to group
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
             desc="move focused window to group {}".format(i.name)),
