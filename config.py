@@ -23,7 +23,7 @@ from libqtile.lazy import lazy
 from colors import gruvbox
 from colors import catppuccin
 
-from bar1 import bar
+from bar import bar
 
 mod = "mod4"
 terminal = "alacritty"
