@@ -11,7 +11,7 @@ This is my personal config for [qtile](https://www.qtile.org) using Arch Linux a
 #### Example wint NeoVim
 ![alt text](https://github.com/Felipe08-uru/trying-qtile/blob/main/images/NeoVim_Example.png)
 
-### (Aclarattions)
+### (Things to have in mind)
 
 All the themes are [Catppuccin Mocha](https://github.com/catppuccin/catppuccin)
 
