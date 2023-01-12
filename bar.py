@@ -21,6 +21,7 @@ from colors import catppuccin
 bar = Bar([
     GroupBox(
         disable_drag=True,
+        fontsize = 20,
         active=catppuccin['text'],
         inactive=catppuccin['subtext1'],
         highlight_method='line',
@@ -82,6 +83,7 @@ bar = Bar([
     left_arrow(catppuccin['surface2'], catppuccin['overlay0']),
     QuickExit(
         default_text=' ',
+        fontsize=20,
         foreground=catppuccin['maroon'],
         countdown_format='[{}]',
         background=catppuccin['overlay0'],
