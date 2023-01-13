@@ -11,3 +11,4 @@ pasystray &
 deadd-notification-center &
 nitrogen --restore &
 picom &
+/usr/bin/emacs --daemon &
