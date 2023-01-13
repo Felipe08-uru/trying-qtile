@@ -1,5 +1,5 @@
 # trying-qtile (Sorry for my english btw)
-This is my personal config for [qtile](https://www.qtile.org) using Arch Linux and Picom.
+This is a personal config by a teenager for [qtile](https://www.qtile.org) using Arch Linux and Picom.
 
 ### Screenshots
 #### Example using Cmus
