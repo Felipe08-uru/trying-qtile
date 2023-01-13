@@ -3,13 +3,13 @@ This is a personal config by a teenager for [qtile](https://www.qtile.org) using
 
 ### Screenshots
 #### Example using Cmus
-![alt text](https://github.com/Felipe08-uru/trying-qtile/blob/main/images/Cmus_Example.png)
+![alt text](https://github.com/Felipe08-uru/trying-qtile/blob/main/images/Cmus_Desktop.png)
 
 #### Examples with the terminal
-![alt text](https://github.com/Felipe08-uru/trying-qtile/blob/main/images/Terminal_Example.png)
+![alt text](https://github.com/Felipe08-uru/trying-qtile/blob/main/images/Terminal_Desktop.png)
 
 #### Example wint NeoVim
-![alt text](https://github.com/Felipe08-uru/trying-qtile/blob/main/images/NeoVim_Example.png)
+![alt text](https://github.com/Felipe08-uru/trying-qtile/blob/main/images/NeoVim_Desktop.png)
 
 ### (Things to have in mind)
 
