@@ -95,12 +95,12 @@ keys = [
 groups = [
         Group('1', label="", matches=[
             Match(wm_class='firefox')], layout="stack"),
-        Group('2', label="", layout="monadtall"),
+        Group('2', label="", layout="columns"),
         Group('3', label="", layout="monadtall"),
         Group('4', label="", layout="columns"),
         Group('5', label="", matches=[
             Match(wm_class='discord'), Match(wm_class='zoom')], layout="stack"),
-        Group('6', label="ﱘ", matches=[Match(wm_class="Spotify")], layout="monadtall"),
+        Group('6', label="ﱘ", matches=[Match(wm_class="Spotify")], layout="columns"),
         ]
 
 
@@ -144,7 +144,7 @@ layouts = [
             border_focus=catppuccin['lavender'],
             margin=8,
             border_width=2,
-            single_border_width=1,
+            single_border_width=2,
             single_margin=8,
             ),
         Columns(
@@ -160,8 +160,8 @@ layouts = [
         ]
 
 floating_layout = Floating(
-        border_normal=gruvbox['bg0'],
-        border_focus=gruvbox['magenta'],
+        border_normal=catppuccin['base'],
+        border_focus=catppuccin['lavender'],
         border_width=2,
         float_rules=[
             *Floating.default_float_rules,
@@ -194,7 +194,7 @@ mouse = [
 widget_defaults = dict(
         font='FiraCode Nerd Font Mono',
     fontsize=12,
-    padding=10,
+    padding=8,
     foreground=catppuccin['surface0'],
 )
 
